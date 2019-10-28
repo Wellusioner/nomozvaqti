@@ -1,0 +1,129 @@
+html, body{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  height: auto;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url('../images/makkah2.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.main{
+  height: 100%;
+  min-height: 100vh;
+  background-color: rgba(0,0,0, 0.85);
+  box-sizing: border-box;
+}
+
+.main-block{
+  height: 100%;
+  min-height: 80vh;
+}
+
+.app-title{
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+}
+
+.paper{
+  border-radius: 5px;
+  background-color: rgba(255,255,255, 0.95);
+  padding: 15px;
+}
+
+.current-date{
+  text-shadow: 1px 1px 2px #eee;
+  font-weight: 700;
+}
+
+.current-day-group{
+  text-align: center;
+}
+.current-day-group > div{
+  margin-bottom: 2rem;
+}
+.current-day-item {
+  text-align: center;
+  font-weight: 700;
+  font-size: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border: 3px solid #00A938;
+  box-shadow: 0 2px 5px rgba(0,0,0, 0.4);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.current-day-item.active{
+  background-color: #00A938;
+  color: #fff;
+  box-shadow: 0px 0px 0 3px #fff, 0 4px 8px rgba(0,0,0, 0.4);
+}
+.current-day-item span{
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+
+.loader{
+  width: 100px;
+  top: 50%;
+  height: 100px;
+  border-radius: 100%;
+  position: relative;
+  margin: 10px auto;
+}
+
+/* LOADER 1 */
+
+#loader-1:before, #loader-1:after{
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 10px solid transparent;
+  border-top-color: #28A745;
+}
+
+#loader-1:before{
+  z-index: 100;
+  animation: spin 1s infinite;
+}
+
+#loader-1:after{
+  border: 10px solid #fff;
+}
+
+@keyframes spin{
+  0%{
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100%{
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

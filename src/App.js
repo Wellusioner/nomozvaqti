@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Menu from './components/Menu'
+import Table from './components/Table'
+import CurrentDate from './components/CurrentDate'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <Header />
+      <div className="container main-block pb-4">
+        <div className="py-4">
+          <CurrentDate />
+        </div>
+        <div className="paper mb-4">
+          <Menu />
+          <Table />
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
